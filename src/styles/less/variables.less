@@ -1,0 +1,117 @@
+@default-unit: 24px;
+// Default page width
+@page-width: 960px;
+
+// Responsive breakpoints
+@desktop-container:             (@page-width - 1px);
+@tablet-container:              860px;
+@phablet-container:             520px;
+@mobile-container:              379px;
+@wide-desktop-container:        1100px;
+@wide-page-width:               1100px;
+
+// Default page with
+@wide-page-width: 1280px;
+//@page-width: 960px;
+@page-shrink-width: 560px;
+
+// Responsive breakpoints
+@desktop-huge-container: 1600px;
+@desktop-large-container: 1400px;
+@full-rhombus-container: 1279px;
+@ow-desktop-container: 1150px;
+@desktop-small-container: 1023px;
+@desktop-small-container-over: (@desktop-small-container + 1px);
+@desktop-small-container-over-more: (@desktop-small-container-over + 1px);
+//@tablet-container:			767px;
+@tablet-below-container: (@tablet-container - 1px);
+//@phablet-container:			560px;
+@phablet-below-container: (@phablet-container - 1px);
+//@mobile-container:			480px;
+
+@desktop-huge: ~"only screen and (min-width: @{desktop-huge-container})";
+@desktop-large: ~"only screen and (min-width: @{desktop-large-container})";
+@full-rhombus: ~"only screen and (min-width: @{full-rhombus-container})";
+@desktop: ~"only screen and (min-width: @{ow-desktop-container})";
+@desktop-small: ~"only screen and (min-width: @{desktop-small-container})";
+@tablet: ~"only screen and (min-width: @{tablet-container})";
+@tablet-below: ~"only screen and (max-width: @{tablet-below-container})";
+@phablet: ~"only screen and (min-width: @{phablet-container})";
+@phablet-below: ~"only screen and (max-width: @{phablet-below-container})";
+@mobile: ~"only screen and (max-width: @{mobile-container})";
+
+// pouzitie MIMO @media screen {}
+@retina: ~"only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx)";
+
+@bg-tablet: ~"only screen and (min-width: @{tablet-container})";
+@bg-tablet-retina: ~"only screen and (min-width: @{tablet-container}) and (max-width: @{desktop-small-container-over}) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-width: @{tablet-container}) and (max-width: @{desktop-small-container-over}) and (min-resolution: 1.5dppx)";
+@bg-desktop: ~"only screen and (min-width: @{desktop-small-container-over-more})";
+@bg-desktop-retina: ~"only screen and (min-width: @{desktop-small-container-over-more}) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-width: @{desktop-small-container-over-more}) and (min-resolution: 1.5dppx)";
+
+// pouzitie V RAMCI @media screen {}
+@retinaIn: ~"(-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx)";
+
+@Arial: 'Arial CE', Arial, Helvetica, sans-serif;
+@OpenSans: 'open_sans', 'Arial CE', Arial, 'Verdana CE', Verdana, sans-serif;
+
+// Vodafone font definitions
+@VodafoneLt: 'VodafoneLt', 'Arial CE', Arial, Helvetica, sans-serif;
+@VodafoneRg: 'VodafoneRg', 'Arial CE', Arial, Helvetica, sans-serif;
+@VodafoneRgBd: 'VodafoneRgBd', 'Arial CE', Arial, Helvetica, sans-serif;
+@VodafoneExB: 'VodafoneExB', 'Arial CE', Arial, Helvetica, sans-serif;
+
+@wfaExportIcons: ~"body";
+@wfaVodafoneIcons: ~"body";
+@wfaOpenSans: ~"body";
+@wfaVodafoneLt: ~"body";
+@wfaVodafoneRg: ~"body";
+@wfaVodafoneRgBd: ~"body";
+@wfaVodafoneExB: ~"body";
+
+//@default-font-size:   14;
+//@default-line-height: @default-font-size * 1.7;
+
+// Global colors
+@link-color: #963595;
+@link-hover-color: black;
+@link-active-color: #e60000;
+
+@font-color: #434343;
+
+@violet: #9c2aa0;
+@violet-dark: #5e2750;
+@red: #e60000;
+@blue: #008a8e;
+@green: #59b64d;
+@positivegreen: #1d9b06;
+@gray: #858585;
+@gray-lighter: #eeeeee;
+@gray-light: #cccccc;
+@gray-dark: #434241;
+@gray-box: #fafafa;
+@text-color: #3a3a3a;
+@text-darkgray: #272727;
+@text-color: #3a3a3a;
+@text-lightgray: #999;
+@orange: #ff5400;
+@aquablue: #00b0ca;
+
+@funnel-blue: #00ABB3;
+@funnel-green: #9CAF3B;
+@funnel-red: @red;
+@funnel-orange: #EA953B;
+
+// Global margin & padding
+@default-margin: 10px;
+@default-margin-top: 15px;
+@default-margin-right: 10px;
+@default-margin-bottom: 15px;
+@default-margin-left: 10px;
+
+@default-padding: 10px;
+@default-padding-top: 10px;
+@default-padding-right: 20px;
+@default-padding-bottom: 10px;
+@default-padding-left: 20px;
+
+@heading-top: 0;

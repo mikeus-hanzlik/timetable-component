@@ -1,0 +1,200 @@
+@import 'variables';
+
+.timePeriodSelector.timePeriodSelector table,
+.manualEntryTexts {
+  display: none;
+}
+
+.timePeriodSelector.timePeriodSelector {
+
+  th,
+  td {
+    text-align: center;
+    padding: 5px;
+    border: 1px solid @gray-light;
+    font-size: 11px;
+    cursor: pointer;
+
+    &.corner {
+      //border: 0;
+      width: 40px;
+      cursor: auto;
+    }
+
+    &:first-child {
+      //border-left: 0;
+    }
+
+    &:last-child {
+      //border-right: 0;
+    }
+  }
+
+  th {
+    font-weight: bold;
+    &:hover {
+      background: #d4d4d4;
+    }
+
+    &.day {
+      width: 40px;
+    }
+  }
+
+  tbody {
+    th {
+      white-space: nowrap;
+    }
+
+    tr {
+      th {
+        border-color: @gray-light;
+      }
+
+      td {
+        padding: 0;
+
+        border-right: 0;
+        border-left-color: @gray-light;
+
+        &[data-minute='0'] {
+          border-left-color: @gray-light;
+          &:hover {
+            background: #D4D4D4;
+          }
+        }
+        &[data-minute='15'] {
+          border-left: 0;
+          &:hover {
+            background: #D4D4D4;
+          }
+        }
+        &[data-minute='30'] {
+          border-left: 0;
+          &:hover {
+            background: #D4D4D4;
+          }
+        }
+        &[data-minute='45'] {
+          border-left: 0;
+          &:hover {
+            background: #D4D4D4;
+          }
+        }
+
+        &:last-child {
+          border-right: 1px solid @gray-light;
+          &:hover {
+            background: #D4D4D4;
+          }
+        }
+      }
+    }
+  }
+
+  td {
+    &[data-hour] {
+      cursor: pointer;
+    }
+  }
+
+  .selected {
+    background: @gray-light;
+  }
+
+  .active {
+    background: @aquablue;
+    color: #fff;
+  }
+
+  .manualEntry {
+    //border: 1px solid @gray-light;
+    //padding: @default-unit/2;
+    border-radius: 5px;
+    margin-bottom: @default-unit/2;
+    margin-top: @default-unit/2;
+    .fCell,
+    .ui-selectmenu-button {
+      margin-bottom: @default-unit/4;
+    }
+    .fCell {
+      display: block;
+    }
+  }
+}
+
+@media only screen and (min-width: @phablet-container) {
+  .timePeriodSelector {
+    .manualEntry {
+      .label {
+        display: block;
+        float: none;
+        text-align: left;
+        padding-bottom: 0;
+      }
+      .fCell div {
+        float: left;
+        margin-right: 8px;
+      }
+    }
+    .addEntryButton {
+      margin-bottom: @default-unit/2;
+    }
+    .addEntry {
+      margin-left: 0;
+
+    }
+  }
+}
+
+@media only screen and (min-width: @tablet-container) {
+  .timePeriodSelector.timePeriodSelector {
+    table {
+      display: table;
+    }
+    .manualEntry {
+      margin-top: @default-unit;
+      margin-bottom: @default-unit;
+      .fCell {
+        float: left;
+      }
+    }
+    .addEntryButton {
+      margin-left: 0;
+      clear: both;
+      .button {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .manualEntryTexts {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: @desktop-container) {
+  .timePeriodSelector.timePeriodSelector {
+    table {
+      display: table;
+    }
+    .manualEntry {
+      margin-top: 0;
+    }
+  }
+}
+
+@media only screen and (min-width: @wide-desktop-container) {
+  .timePeriodSelector.timePeriodSelector {
+    .fCell {
+      float: left;
+    }
+
+    .manualEntry {
+      .addEntryButton {
+        margin-top: 32px;
+        clear: none;
+      }
+    }
+  }
+}
