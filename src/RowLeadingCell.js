@@ -7,11 +7,12 @@ class RowLeadingCell extends Component {
         super(props);
 
         this.day = props.day;
+        this.handleClick = props.handleClick;
     }
 
     render() {
         return (
-            <th className="day">{Util.getDayName(this.day)}</th>
+            <th className="day" onClick={this.handleClick}>{Util.getDayName(this.day)}</th>
         );
     }
 }

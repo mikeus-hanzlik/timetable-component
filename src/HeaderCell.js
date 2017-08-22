@@ -6,12 +6,12 @@ class HeaderCell extends Component {
         super(props);
 
         this.hour = props.hour;
-        this.intervalsPerHour = props.intervalsPerHour;
+        this.handleHeaderCellClick = props.handleHeaderCellClick;
     }
 
     render() {
         return (
-            <th colSpan={this.intervalsPerHour}>{this.hour}</th>
+            <th onClick={this.handleHeaderCellClick}>{this.hour}</th>
         );
     }
 }

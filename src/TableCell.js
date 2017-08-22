@@ -11,12 +11,12 @@ class TableCell extends Component {
         this.getTitle= this.getTitle.bind(this);
 
         this.state = {
-            active: false,
+            active: props.cellState,
         };
 
         this.day = props.day;
         this.hour = props.hour;
-        this.minute = props.minute;
+        this.handleCellClick = props.handleCellClick;
     }
 
     toggleClass() {
@@ -27,14 +27,14 @@ class TableCell extends Component {
     getTitle() {
         let padTime = R.partialRight(Util.pad, [2, '0']);
 
-        return `${Util.getDayName(this.day)}, ${padTime(this.hour)}:${padTime(this.minute)}`;
+        return `${Util.getDayName(this.day)}, ${padTime(this.hour)}:00`;
     }
 
     render() {
         return (
             <td
                 className={this.state.active ? 'active': null}
-                onClick={this.toggleClass}
+                onClick={this.handleCellClick(this.toggleClass)}
                 title={this.getTitle()}/>
         );
     }
