@@ -2,27 +2,20 @@ import React, {Component} from "react";
 import TableRow from './TableRow';
 import "./styles/styles.css";
 import Util from "./Util";
+import HeaderCell from "./HeaderCell";
 
 class TimeTable extends Component {
-
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            aaa: ''
-        };
-    }
-
     render() {
         const hours = 24;
         const days = 7;
+        const intervalsPerHour = 1;
 
         let tableHeaderItems = Util.generateSequence(hours).map((hour) =>
-            <th colSpan="4" data-day="0" data-hour={hour}>{hour}</th>
+            <HeaderCell intervalsPerHour={intervalsPerHour} hour={hour} key={hour}/>
         );
 
         let tableRows = Util.generateSequence(days, 1).map((day) =>
-            <TableRow day={day}/>
+            <TableRow intervalsPerHour={intervalsPerHour} day={day} key={day}/>
         );
 
         return (
