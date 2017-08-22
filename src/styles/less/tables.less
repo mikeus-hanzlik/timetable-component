@@ -1,0 +1,445 @@
+/* basic table */
+table:not(.dataTable) {
+	width: 99.8%;
+	display: block;
+	thead,
+	tbody,
+	tr,
+	td,
+	th {
+		display: block;
+		border-top: 0;
+		width: 100%;
+		height: auto;
+		text-align: left;
+	}
+	tr {
+		padding: 15px 0;
+		border-bottom: 1px solid #eee;
+		&:last-child {
+			border: 0;
+			padding-bottom: 0;
+		}
+	}
+	th,
+	td {
+		padding: 3px 0;
+	}
+}
+
+@media only screen and (min-width: @tablet-container) {
+	table:not(.dataTable) {
+		display: table;
+		width: 100%;
+		thead {
+			display: table-header-group;
+		}
+		tbody {
+			display: table-row-group;
+		}
+		tr {
+			display: table-row;
+			width: auto !important;
+			margin-bottom: 0;
+		}
+		td,
+		tbody th {
+			display: table-cell;
+			width: auto;
+			border-top: 1px solid #eee;
+			padding: 12px;
+			padding-left: 0;
+		}
+		th,
+		td {
+			&:last-child {
+				padding-right: 0;
+			}
+		}
+		th {
+			display: table-cell;
+			width: auto !important;
+		}
+		tr:first-child {
+			th,
+			td {
+				border: 0;
+			}
+		}
+		th,
+		td {
+			&.right {
+				text-align: right;
+			}
+			&.center {
+				text-align: center;
+			}
+		}
+	}
+}
+
+.tableOverflow.tableOverflow {
+	overflow-x: auto;
+	overflow-y: hidden;
+	table {
+		display: table;
+		word-wrap: normal;
+		table-layout: auto;
+		width: 100%;
+		margin-bottom: 0;
+	}
+	thead {
+		display: table-header-group;
+	}
+	tbody {
+		display: table-row-group;
+	}
+	tr {
+		display: table-row;
+	}
+	th,
+	td {
+		display: table-cell;
+		padding: 10px 15px 10px 0;
+		border-bottom: 1px solid #eee;
+		width: auto;
+		&:last-child {
+			padding-right: 0;
+		}
+		.right {
+			text-align: right;
+		}
+	}
+	th {
+		font-weight: bold;
+	}
+	.noLabelCheckbox {
+		width: 40px;
+		label {
+			height: 25px;
+			margin: 0;
+			padding-right: 0;
+		}
+
+		.ui-button-text {
+			display: none;
+		}
+	}
+}
+
+.moveRowDown,
+.moveRowUp {
+	position: relative;
+	cursor: pointer;
+	display: inline-block;
+	width: 14px;
+}
+
+.moveRowDown:before,
+.moveRowUp:before {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	margin-top: -4px;
+}
+
+.moveRowDown:before {
+	content: "";
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+	border-top: 8px solid @violet;
+}
+
+.moveRowUp:before {
+	content: "";
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+	border-bottom: 8px solid @violet;
+}
+
+td {
+	vertical-align: top;
+}
+
+.tablesaw-cell-label label {
+	display: none !important;
+}
+
+/* Tables */
+
+table {
+	border: 0;
+	font-size: 14px;
+}
+
+table thead th,
+table tfoot th {
+	vertical-align: bottom;
+}
+
+/*thead {
+	display: none;
+}*/
+
+.styledTable {
+	tr {
+		padding-top: .5em;
+		padding-bottom: .5em;
+	}
+	th {
+		font-weight: normal;
+	}
+}
+
+.cleanTable {
+	&.cleanTable,
+	&.cleanTable th,
+	&.cleanTable td {
+		border: 0;
+	}
+}
+
+.cleanTable.cleanTable tr {
+	border: 0;
+	padding: 0 0 @default-unit / 2 0;
+}
+
+.check {
+	width: 55px;
+}
+
+.settings {
+	width: 50px;
+}
+
+.tableWithLinks tbody tr {
+	cursor: pointer;
+	&:hover {
+		color: @violet;
+	}
+}
+
+.tableButtons {
+	padding: @default-unit/2;
+}
+
+table .msg {
+	margin-bottom: 0;
+}
+
+.tableOverflow {
+	overflow-x: auto;
+	overflow-y: hidden;
+}
+
+/* tablesaw edits */
+.tablesaw-cell-persist {
+	border-right: 1px solid @mid-gray !important;
+}
+
+.tablesaw.tablesaw {
+
+	line-height: 1.2em;
+	font-size: 14px;
+
+	thead {
+		display: table-header-group;
+	}
+	td {
+		border-top: 1px solid @mid-gray;
+		border-bottom: 1px solid @mid-gray;
+	}
+}
+
+@media only screen and (min-width: @phablet-container) {
+}
+
+@media only screen and (min-width: @tablet-container) {
+	/* Tables */
+	table.respTable {
+		//table-layout: fixed;
+		border-collapse: collapse;
+		border-spacing: 0;
+		//word-wrap: break-word; // CSS3 Browsers
+		//-ms-word-wrap: break-word; // IE8
+		//*white-space: normal; // IE7
+		display: table;
+		width: 100%;
+		font-size: 14px;
+		border-top: 1px solid #eee;
+		tbody {
+			display: table-row-group;
+		}
+
+		tr {
+			display: table-row;
+			border: 0;
+		}
+
+		th,
+		td {
+			padding: @default-unit/3;
+			text-align: left;
+			vertical-align: middle !important;
+			display: table-cell;
+			border-bottom: 1px solid #eee;
+			line-height: 1.3em;
+		}
+
+		th:first-child,
+		td:first-child {
+			padding-left: @default-unit/2;
+			padding-top: @default-unit/3;
+		}
+
+		th:last-child,
+		td:last-child {
+			padding-right: @default-unit/2;
+		}
+	}
+
+	th.right,
+	td.right {
+		text-align: right;
+	}
+
+	table thead th,
+	table tfoot th {
+		vertical-align: bottom;
+		line-height: 1.3em;
+	}
+
+	thead {
+		display: table-header-group;
+	}
+
+	td.center,
+	th.center {
+		text-align: center !important;
+	}
+
+	.cleanTable.cleanTable {
+		width: auto;
+		margin-bottom: @default-margin-bottom / 2;
+		td, th {
+			padding: 0 15px 10px 0 !important;
+			border: 0;
+			font-weight: normal;
+		}
+		td {
+			font-weight: bold;
+		}
+	}
+
+	.styledTable {
+		th, td {
+			vertical-align: middle;
+			padding-top: .5em;
+			padding-bottom: .5em;
+		}
+	}
+
+	.filter {
+		margin-bottom: @default-unit;
+	}
+
+	.check .ui-checkbox:before {
+		top: 2px;
+	}
+
+	td.check {
+		padding-top: 2px !important;
+	}
+}
+
+/* tablesaw edits */
+
+.tablesaw-columntoggle tbody td {
+	line-height: normal;
+}
+
+.tablesaw.tablesaw {
+	border-top: 1px solid @mid-gray;
+	td,
+	th {
+		padding-top: .6em;
+		padding-bottom: .6em;
+		padding-left: 0;
+		padding-right: 1em;
+	}
+	.ui-checkbox {
+		margin-top: -5px;
+	}
+}
+
+.tablesaw-bar {
+	position: absolute;
+	top: 5px;
+	right: 0;
+}
+
+.tablesaw td.right {
+	text-align: right;
+}
+
+.equalPaddingToggleContent .tablesaw.tablesaw {
+	border: 0;
+	margin: 0;
+	th,
+	td {
+		padding-left: 1em;
+		padding-right: 1em;
+	}
+	tr:last-child td {
+		border-bottom: 0;
+	}
+}
+
+/*.tablesaw-bar-holder {
+	position: relative;
+	padding-top: 42px;
+}*/
+
+.table-saw-bar-heading {
+	padding: 0 10px;
+	line-height: 30px;
+	float: left;
+
+}
+
+.check .checkbox {
+	visibility: hidden;
+}
+
+.check label.ui-checkbox {
+	text-indent: -200px;
+	margin-top: 9px;
+}
+
+.servicesTableWrapper {
+	table.dataTable.dataTable thead th {
+		min-width: 100px;
+		max-width: 300px;
+		&.addMinWidth {
+			min-width: 180px;
+		}
+	}
+}
+
+.numbersTransferTable.numbersTransferTable {
+	width: 100%;
+	thead {
+		display: table-header-group;
+	}
+	th,
+	td {
+		padding: 5px 0 5px 10px;
+		&:first-child {
+			padding-left: 0;
+		}
+		vertical-align: middle;
+	}
+	th {
+		font-weight: normal;
+	}
+}

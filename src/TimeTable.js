@@ -35,7 +35,8 @@ class TimeTable extends Component {
                     </tr>
                     </thead>
                     <tbody>
-                    {tableRows}
+                        <tr/>
+                        {tableRows}
                     </tbody>
                 </table>
             </div>

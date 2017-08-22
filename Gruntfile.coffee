@@ -15,12 +15,12 @@ module.exports = (grunt) ->
           compress: true
           sourceMap: true
         files :
-          './src/styles/styles.css' : './src/styles/less/timetable-selector.less'
+          './src/styles/styles.css' : './src/styles/less/timetable.less'
 
     grunt.loadNpmTasks 'grunt-contrib-less'
     grunt.loadNpmTasks 'grunt-contrib-watch'
 
-    grunt.registerTask 'default', 'Build app and run stack.', (app = 'app') ->
+    grunt.registerTask 'default', 'Build app and run stack.', () ->
       grunt.task.run [
         'less:timetable',
       ]

@@ -1,0 +1,1104 @@
+/* Resets */
+
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background: white !important;
+}
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+article,
+aside,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+main {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted #000;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+label,
+input[type=button],
+input[type=submit],
+button {
+  cursor: pointer;
+}
+
+input[type="radio"] {
+  vertical-align: middle;
+}
+
+/* micro clearfix */
+
+.cf:before,
+.cf:after,
+.row:before,
+.row:after,
+.serviceManagement li:before,
+.serviceManagement li:after,
+.designedList li:before,
+.designedList li:after,
+.fCell:before,
+.fCell:after,
+.boxWrapper:before,
+.boxWrapper:after,
+.boxWrapper2:before,
+.boxWrapper2:after,
+.dashboardLinks:before,
+.dashboardLinks:after,
+.fullWidthContent:after,
+.halfWidthContent:after {
+  content: " ";
+  display: table;
+}
+
+.cf:after,
+.row:after,
+.serviceManagement li:after,
+.designedList li:after,
+.fCell:after,
+.boxWrapper:after,
+.boxWrapper2:after,
+.dashboardLinks:after,
+.fullWidthContent:after,
+.halfWidthContent:after {
+  clear: both;
+}
+
+.cf,
+.row,
+.serviceManagement li,
+.designedList li,
+.fCell,
+.boxWrapper,
+.boxWrapper2,
+.dashboardLinks,
+.fullWidthContent,
+.halfWidthContent {
+  *zoom: 1;
+}
+
+/* visually hidden - Hide only visually, but have it available for screenreaders */
+
+.visuallyHidden,
+.hide,
+legend,
+.leadForm label {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.visuallyHidden.focusable:active,
+.visuallyHidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+.visuallyVisible {
+  clip: auto;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  left: 0;
+}
+
+.none,
+.noBreakInMobile,
+.paginatorHidden {
+  display: none !important;
+}
+
+pre {
+  box-shadow: inset 1px 1px 8px #999999;
+  margin-bottom: @default-unit;
+  overflow: auto;
+}
+
+html {
+  background: #eeeeee;
+  color: #000;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  overflow-y: scroll;
+  background: #2E2E2E;
+  font-size: @default-font-size;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: @OpenSans;
+  font-size: @default-font-size;
+  line-height: (@default-line-height);
+  color: #434343;
+  background: #EEE;
+  min-height: 500px;
+}
+
+body.whiteBody {
+  background: #FFF;
+}
+
+.lowLineHeight {
+  line-height: 1.3em;
+}
+
+.red {
+  color: @red !important;
+}
+
+.blue {
+  color: @blue !important;
+}
+
+.green {
+  color: @green !important;
+}
+
+.green2 {
+  color: @green2 !important;
+}
+
+.violet {
+  color: @violet !important;
+}
+
+.orange {
+  color: @orange !important;
+}
+
+.gray {
+  color: @gray;
+}
+
+.aquablue {
+  color: @aquablue;
+}
+
+.redBg {
+  background-color: @red;
+  color: #fff;
+}
+
+.blueBg {
+  background-color: @blue !important;
+  color: #fff;
+}
+
+.greenBg {
+  background-color: @green;
+  color: #fff;
+}
+
+.orangeBg {
+  background-color: @orange;
+  color: #fff;
+}
+
+.grayBg {
+  background-color: #E9E9E9;
+}
+
+.yellowBg {
+  background-color: @yellow;
+  color: @font-color;
+}
+
+.semiTransparent {
+  opacity: 0.5;
+}
+
+.notTransparent {
+  opacity: 1;
+}
+
+/* globals */
+
+.relative {
+  position: relative;
+}
+
+.content {
+  position: relative;
+}
+
+.noWrap {
+  white-space: nowrap;
+}
+
+.vodafoneRgBd {
+  font-family: @VodafoneRgBd;
+  font-weight: normal;
+}
+
+.vodafoneRg {
+  font-family: @VodafoneRg;
+  font-weight: normal;
+}
+
+.openSans {
+  font-family: @OpenSans;
+}
+
+.smallTypo {
+  font-size: 0.9em;
+}
+
+.small,
+small {
+  font-size: 0.85em;
+}
+
+.giant {
+  font-size: 2.7em;
+  margin-bottom: .4em;
+  display: inline-block;
+  line-height: .7em;
+}
+
+.tableCell .giant {
+  margin-bottom: 0;
+}
+
+.big {
+  font-size: 1.3em;
+}
+
+.big .vodafoneRgBd {
+  font-size: 1.7em;
+  line-height: 1.2em;
+}
+
+.bb {
+  border-bottom: 1px solid @light-gray;
+  padding-bottom: @default-unit/2;
+  margin-bottom: @default-unit/2;
+}
+
+.bt {
+  border-top: 1px solid @light-gray;
+  padding-top: @default-unit/2;
+}
+
+li.bb {
+  padding-bottom: .6em;
+  margin-bottom: @default-unit / 4;
+}
+
+.paddedContent > .bb {
+  border-color: #d5d5d5;
+}
+
+.dblbt {
+  border-top: 2px solid #d9d9d9;
+}
+
+.mb {
+  margin-bottom: @default-unit / 2;
+}
+
+.mt {
+  margin-top: @default-unit / 4;
+}
+
+.ptpb {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  display: inline-block;
+}
+
+.ptpb2 {
+  padding-top: @default-unit;
+  padding-bottom: @default-unit;
+}
+
+.toggleContent {
+  clear: both;
+}
+
+.wrapAnchor {
+  color: inherit;
+  text-decoration: none;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.roundedBox {
+  border: 1px solid #b0b0b0;
+  padding: 20px 20px 1px 20px;
+  text-align: center;
+}
+
+.linkWithIcon {
+  text-decoration: none;
+  span {
+    text-decoration: underline;
+  }
+}
+
+.addPadding {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* Strong and Italic */
+
+b,
+strong {
+  .strong();
+}
+
+.vodafoneRgBd {
+  b,
+  strong {
+    font-weight: normal;
+  }
+}
+
+i,
+em,
+.em {
+  .italic();
+}
+
+/* Links */
+
+a {
+  color: @link-color;
+
+}
+
+a:hover {
+  text-decoration: none;
+  color: @link-hover-color
+
+}
+
+a:focus {
+  outline: thin dotted;
+}
+
+a:focus,
+a:active {
+  color: @link-active-color
+
+}
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* Abbreviations */
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/* Audio */
+
+audio,
+canvas,
+video {
+  .inline-block();
+}
+
+audio:not([controls]) {
+  .none();
+  height: 0;
+}
+
+/* Small, Sub and Sup */
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -.5em;
+}
+
+sub {
+  bottom: -.25em;
+}
+
+/* Definition */
+
+dfn {
+  .italic();
+}
+
+/* Images */
+
+img {
+  border: 0;
+  vertical-align: middle;
+  -ms-interpolation-mode: bicubic;
+  max-width: 100%;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+figure {
+  margin: 0;
+}
+
+/* Headings */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  line-height: 1em;
+  color: #4a4d4e;
+  margin-bottom: @default-unit/2;
+  font-family: @VodafoneRgBd;
+  font-weight: normal;
+}
+
+h1,
+.h1 {
+  font-size: @h1;
+}
+
+h2,
+.h2 {
+  font-size: @h2;
+}
+
+h3,
+.h3 {
+  font-size: @h3;
+}
+
+h4,
+.h4 {
+  font-size: @h4;
+
+  margin-bottom: .5em;
+}
+
+h5,
+.h5 {
+  font-size: @h5;
+}
+
+h6,
+.h6 {
+  font-size: @h6;
+
+}
+
+/* Reset Heading */
+
+.no-style-heading {
+  margin: 0;
+  font-size: 100%;
+}
+
+h1 small {
+  font-size: .6em;
+  color: #434343;
+}
+
+/* Horizontal Rule */
+
+hr {
+  border: 0;
+  background: none;
+  outline: 0;
+  background-color: #ddd;
+  margin: 2em 0;
+  *margin: 1em 0;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 1px;
+}
+
+/* Block Quotes and Quotes */
+
+blockquote {
+  .font-size(22);
+  .line-height(32);
+  color: #434343;
+  margin: 1em 0;
+  .italic();
+  p {
+    margin: 1em 0;
+  }
+}
+
+cite {
+  color: #434343;
+  font-style: normal;
+  .normal();
+  .font-size(16);
+  line-height: normal;
+}
+
+q {
+  .italic();
+  quotes: none;
+}
+
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+/* Mark */
+
+mark {
+  background: #ff0;
+  color: #111;
+}
+
+/* Code */
+
+code,
+kbd,
+pre,
+samp {
+  font-family: 'courier new', monospace, serif;
+  .font-size(13);
+  line-height: normal;
+  font-weight: normal;
+  background-color: #f1f1f1;
+  padding: 10px;
+}
+
+code {
+  color: #111;
+}
+
+p,
+ul,
+ol,
+dl,
+table {
+  margin-bottom: @default-unit / 2;
+}
+
+dd,
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+  margin: 0;
+}
+
+dt {
+  .normal();
+}
+
+dd {
+  margin-bottom: @default-unit;
+
+}
+
+menu,
+ol,
+ul {
+  padding: 0;
+  list-style: none;
+  list-style-image: none;
+}
+
+ul li {
+  margin-bottom: 0.5em;
+}
+
+ul.discList,
+.specialOfferContent ul {
+  list-style: disc;
+  margin-left: 20px;
+}
+
+.decimalList {
+  list-style: decimal !important;
+  padding-left: 18px;
+  li {
+    margin-bottom: .8em;
+    ul {
+      margin-top: .8em;
+    }
+  }
+}
+
+ul.styledList li {
+  border-bottom: 1px solid @light-gray;
+  margin: 0;
+  padding: .5em 0;
+  &:first-child {
+    border-top: 1px solid @light-gray;
+  }
+}
+
+/* Tables */
+
+table.respTable {
+  display: block;
+  tbody {
+    display: block;
+  }
+  tr {
+    display: block;
+    width: 100%;
+    &:first-child {
+      border: 0;
+      padding-top: 0;
+    }
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+
+  th,
+  td {
+    display: block;
+    text-align: left;
+  }
+
+  thead th,
+  tfoot th {
+    vertical-align: bottom;
+  }
+
+  thead {
+    display: none;
+  }
+}
+
+.styledTable {
+  tr {
+    padding-top: .5em;
+    padding-bottom: .5em;
+  }
+  th {
+    font-weight: normal;
+  }
+}
+
+.dataTables_wrapper thead,
+.dataTable thead {
+  display: table-header-group;
+  white-space: nowrap;
+}
+
+.dataTable {
+  z-index: 10000;
+}
+
+.cleanTable tr {
+  border: 0;
+  padding: 0 0 @default-unit / 2 0;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+/* Display */
+
+.block {
+  display: block;
+}
+
+.inline {
+  display: inline;
+}
+
+.inline-block {
+  display: inline-block;
+  *zoom: 1;
+  *display: inline;
+}
+
+.none,
+[hidden] {
+  display: none;
+}
+
+/* Font Weights */
+
+.heavy {
+  font-weight: 900;
+}
+
+.strong {
+  font-weight: 700;
+}
+
+.normal {
+  font-weight: normal;
+}
+
+.thin {
+  font-weight: 300;
+}
+
+.italic {
+  font-style: italic;
+}
+
+/* Font Styles */
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.clr {
+  clear: both;
+  position: relative;
+  padding: 0;
+  height: 0;
+  border: none;
+  overflow: hidden;
+  visibility: hidden;
+  line-height: 0;
+}
+
+.clear {
+  clear: both;
+}
+
+.error {
+  color: @red;
+  //font-weight: bold;
+}
+
+.center.center {
+  text-align: center;
+}
+
+p {
+  line-height: 20px;
+}
+
+.spaceTop {
+  margin-top: 30px !important;
+}
+
+/* arrow symbol for toggles */
+
+.symbol {
+  position: absolute;
+  &:after {
+    display: block;
+    width: 20px;
+    height: 20px;
+    font-family: wsc-icons;
+    font-size: 1.5em;
+    color: @dark-gray;
+    transition: 300ms;
+  }
+}
+
+.symbolDown:after {
+  content: "\e64d";
+}
+
+.symbolUp:after {
+  content: "\e64d";
+  -moz-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.toggleText {
+  position: absolute;
+  top: 0;
+  right: 15px;
+  text-decoration: underline;
+  color: @violet;
+}
+
+.ajaxErrorWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(256, 256, 256, 0.9);
+  padding: @default-unit/2;
+  z-index: 30;
+}
+
+p.ajaxError.ajaxError {
+  background: #F8BE20;
+  padding: 14px 45px 14px 20px;
+  font-family: @VodafoneRgBd;
+  font-size: 1.1em;
+  color: black;
+  text-align: left;
+  position: relative;
+  strong {
+    font-weight: normal;
+  }
+  span {
+    position: absolute;
+    top: 14px;
+    right: 20px;
+    margin: 0;
+    cursor: pointer;
+  }
+}
+
+.outdatedBrowser {
+  background: @gray;
+  position: relative;
+  z-index: 1000;
+  font-size: .9em;
+  div {
+    max-width: 960px;
+    padding: 7px 40px 9px 0;
+    color: #fff;
+    margin: 0 auto;
+  }
+  p {
+    margin: 0;
+
+    line-height: 1.3em;
+  }
+  a {
+    color: #fff;
+  }
+  .close {
+    position: absolute;
+    top: 50%;
+    margin-top: -10px;
+    right: 20px;
+    font-weight: bold;
+    font-size: 1.3em;
+    cursor: pointer;
+  }
+}
+
+/* Margin and Padding Reset */
+
+.no-margin {
+  margin: 0 !important;
+}
+
+.no-padding {
+  padding: 0 !important;
+}
+
+.toggleButton {
+  cursor: pointer;
+}
+
+@media only screen and (min-width: @phablet-container) {
+  // tablet style
+  p,
+  ul,
+  ol,
+  dl,
+  table {
+    margin-bottom: @default-unit;
+  }
+
+  .giant {
+    font-size: 3.3em;
+  }
+
+  .bb {
+    padding-bottom: @default-unit;
+    margin-bottom: @default-unit;
+  }
+
+  .bt {
+    padding-top: @default-unit;
+  }
+
+  h1,
+  h2,
+  h3,
+  .h1,
+  .h2,
+  .h3 {
+    margin-bottom: @default-unit;
+  }
+
+  .ajaxErrorWrapper {
+    padding: @default-unit;
+  }
+}

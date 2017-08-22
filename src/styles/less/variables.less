@@ -1,4 +1,6 @@
+@default-font-size: 14px;
 @default-unit: 24px;
+@default-line-height: 19px;
 // Default page width
 @page-width: 960px;
 
@@ -95,6 +97,17 @@
 @text-lightgray: #999;
 @orange: #ff5400;
 @aquablue: #00b0ca;
+@font-color: #434343;
+@light-red: #fef5f5;
+@light-green: #f4fcf6;
+@violet: #8c3a93;
+@black: #1d1c1c;
+@yellow: #F8BE20;
+@light-gray: #eeeeee;
+@mid-gray: #d5d5d5;
+@dark-gray: #b0b0b0;
+@orange: #ff5400;
+@green2: #A9B528;
 
 @funnel-blue: #00ABB3;
 @funnel-green: #9CAF3B;
@@ -115,3 +128,35 @@
 @default-padding-left: 20px;
 
 @heading-top: 0;
+
+// Heading                  Size
+@h1: 26px;
+@h2: 22px;
+@h3: 19px;
+@h4: 18px;
+@h5: 16px;
+@h6: 15px;
+
+
+// Font Sizes (REMs with PX fallback for older browsers)
+.font-size (@sizeValue) {
+  @remValue: @sizeValue / 14;
+  @pxValue: (@sizeValue);
+  font-size: ~"@{pxValue}px";
+  font-size: ~"@{remValue}rem";
+}
+
+// Line Height Sizes (REMs with PX fallback for older browsers)
+.line-height (@sizeValue) {
+  @remValue: @sizeValue / 14;
+  @pxValue: (@sizeValue);
+  line-height: ~"@{pxValue}px";
+  line-height: ~"@{remValue}rem";
+}
+
+// Rounded Corners
+.rounded(@radius) {
+  -webkit-border-radius: ~"@{radius}px";
+  -moz-border-radius: ~"@{radius}px";
+  border-radius: ~"@{radius}px";
+}

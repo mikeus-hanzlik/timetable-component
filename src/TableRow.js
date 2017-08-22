@@ -5,9 +5,17 @@ import TableCell from "./TableCell";
 class TableRow extends Component {
     render() {
         const hours = 24;
+        const minutesInHour = 60;
+        const intervalsPerHour = 4;
+
+        let generateIntervals = (day, hour) => Util.generateSequence(intervalsPerHour)
+            .map((number) => number * (minutesInHour / intervalsPerHour))
+            .map((interval) =>
+                <TableCell day={day} hour={hour} minute={interval}/>
+            );
 
         let rowCells = Util.generateSequence(hours).map((hour) =>
-            <TableCell day={this.props.day} hour={hour}/>
+            generateIntervals(this.props.day, hour)
         );
         return (
             <tr>
