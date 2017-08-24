@@ -121,6 +121,15 @@ class Util {
         newRow[columnIndex] = fn(row[columnIndex]);
         return newRow;
     }
+
+    /**
+     *
+     * @param {Array} array
+     * @returns {*}
+     */
+    static getLastItemOfArray(array) {
+        return array.slice(-1)[0];
+    }
 }
 
 export default Util;

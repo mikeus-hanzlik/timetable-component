@@ -4,6 +4,7 @@ import "./styles/styles.css";
 import Util from "./Util";
 import HeaderCell from "./HeaderCell";
 import R from 'ramda';
+import FormData from "./FormData";
 
 
 // will be moved to config
@@ -56,6 +57,7 @@ class TimeTable extends Component {
                     {tableRows}
                     </tbody>
                 </table>
+                <FormData {...this.state}/>
             </div>
         );
     }
@@ -64,19 +66,19 @@ class TimeTable extends Component {
         return Util.generateMatrix(days, hours);
     }
 
-    handleCellClick(day, hour, e) {
+    handleCellClick(day, hour, event) {
         let updatedMatrix = Util.updateMatrixCell(this.state.componentState, day, hour, (hourState) => !hourState);
 
         this.updateState(updatedMatrix);
     }
 
-    handleHeaderCellClick(hour, e) {
+    handleHeaderCellClick(hour, event) {
         let updatedMatrix = Util.updateMatrixColumn(this.state.componentState, hour, (dayState) => !dayState);
 
         this.updateState(updatedMatrix);
     }
 
-    handleRowLeadingCellClick(day, e) {
+    handleRowLeadingCellClick(day, event) {
         let updatedMatrix = Util.updateMatrixRow(this.state.componentState, day, (hourState) => !hourState);
 
         this.updateState(updatedMatrix);

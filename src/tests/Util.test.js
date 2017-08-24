@@ -57,3 +57,8 @@ it("test updateMatrixColumn", () =>
 it("test updateMatrixRow", () =>
     expect(Util.editRowEntry((a) => !a, 0, [false, false])).toEqual([true, false])
 );
+
+
+it("test getLastItemOfArray", () =>
+    expect(Util.getLastItemOfArray(['aaa', 'bbb'])).toEqual('bbb')
+);
