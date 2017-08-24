@@ -28,3 +28,17 @@ it('test belongToInterval success', () => {
 it('test belongToInterval fail', () => {
     expect(SyncData.belongToInterval({day: 0, from: 0, to: 2}, 5)).toBeFalsy()
 });
+
+
+
+it('test getIntervalsForDay empty', () => {
+    expect(SyncData.getIntervalsForDay(0, [false, false, false])).toEqual([])
+});
+
+it('test getIntervalsForDay one interval', () => {
+    expect(SyncData.getIntervalsForDay(0, [false, true, true, false])).toEqual([{day: 0, from: 1, to: 3}])
+});
+
+it('test getIntervalsForDay tow intervals', () => {
+    expect(SyncData.getIntervalsForDay(0, [true, false, true, false])).toEqual([{day: 0, from: 0, to: 1}, {day: 0, from: 2, to: 3}])
+});
