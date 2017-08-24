@@ -16,7 +16,12 @@ class TimeTable extends Component {
     constructor(props) {
         super(props);
 
-        this.state = {componentState: this.initState()}
+        this.state = {componentState: TimeTable.initState()};
+
+        this.handleCellClick = this.handleCellClick.bind(this);
+        this.handleHeaderCellClick = this.handleHeaderCellClick.bind(this);
+        this.handleRowLeadingCellClick = this.handleRowLeadingCellClick.bind(this);
+        this.updateState = this.updateState.bind(this);
     }
 
     render() {
@@ -27,11 +32,11 @@ class TimeTable extends Component {
                 handleHeaderCellClick={R.curry(this.handleHeaderCellClick)(hour)}/>
         );
 
-        let tableRows = Util.generateSequence(days, 1).map((day) =>
+        let tableRows = Util.generateSequence(days).map((day) =>
             <TableRow
                 key={day}
                 day={day}
-                handleCellClick={R.curry(this.handleCellClick)(day)}
+                handleCellClick={R.curry(this.handleCellClick)}
                 handleRowLeadingCellClick={R.curry(this.handleRowLeadingCellClick)(day)}
                 {...this.state}
             />
@@ -55,34 +60,30 @@ class TimeTable extends Component {
         );
     }
 
-    initState() {
-        let hoursCollection = {};
-        Util.generateSequence(days, 1).map((day) => {
-            hoursCollection[day] = {};
-            Util.generateSequence(hours).map((hour) =>
-                hoursCollection[day][hour] = false
-            );
-        });
-
-        return hoursCollection;
+    static initState() {
+        return Util.generateMatrix(days, hours);
     }
 
-    handleCellClick(day, action, e) {
-        action();
+    handleCellClick(day, hour, e) {
+        let updatedMatrix = Util.updateMatrixCell(this.state.componentState, day, hour, (hourState) => !hourState);
+
+        this.updateState(updatedMatrix);
     }
 
     handleHeaderCellClick(hour, e) {
-        // let newState = this.state.componentState.map((day) => {
-        //     return day.map((hour) => !hour)
-        // });
-        //
-        // this.setState({ componentState: newState });
+        let updatedMatrix = Util.updateMatrixColumn(this.state.componentState, hour, (dayState) => !dayState);
+
+        this.updateState(updatedMatrix);
     }
 
     handleRowLeadingCellClick(day, e) {
-        // this.state.componentState[day] = this.state.componentState[day].map((hourState) => !hourState);
-        //
-        // this.setState({ componentState: this.state.componentState });
+        let updatedMatrix = Util.updateMatrixRow(this.state.componentState, day, (hourState) => !hourState);
+
+        this.updateState(updatedMatrix);
+    }
+
+    updateState(matrix) {
+        this.setState({componentState: matrix});
     }
 }
 

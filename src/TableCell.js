@@ -7,22 +7,12 @@ class TableCell extends Component {
     constructor(props) {
         super(props);
 
-        this.toggleClass= this.toggleClass.bind(this);
-        this.getTitle= this.getTitle.bind(this);
-
-        this.state = {
-            active: props.cellState,
-        };
+        this.getTitle = this.getTitle.bind(this);
 
         this.day = props.day;
         this.hour = props.hour;
-        this.handleCellClick = props.handleCellClick;
+        this.handleCellClick = props.handleCellClick(props.day, props.hour);
     }
-
-    toggleClass() {
-        const currentState = this.state.active;
-        this.setState({ active: !currentState });
-    };
 
     getTitle() {
         let padTime = R.partialRight(Util.pad, [2, '0']);
@@ -33,8 +23,8 @@ class TableCell extends Component {
     render() {
         return (
             <td
-                className={this.state.active ? 'active': null}
-                onClick={this.handleCellClick(this.toggleClass)}
+                className={this.props.cellState ? 'active' : null}
+                onClick={this.handleCellClick}
                 title={this.getTitle()}/>
         );
     }

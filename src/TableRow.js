@@ -11,7 +11,6 @@ class TableRow extends Component {
         this.day = props.day;
         this.handleCellClick = props.handleCellClick;
         this.handleRowLeadingCellClick = props.handleRowLeadingCellClick;
-        this.componentState = props.componentState;
     }
 
     render() {
@@ -23,13 +22,13 @@ class TableRow extends Component {
                 day={this.day}
                 hour={hour}
                 handleCellClick={this.handleCellClick}
-                cellState={this.componentState[this.day][hour]}
+                cellState={this.props.componentState[this.day][hour]}
             />
         );
 
         return (
             <tr>
-                <RowLeadingCell day={this.day} handleClick={this.handleRowLeadingCellClick} />
+                <RowLeadingCell day={this.day} handleClick={this.handleRowLeadingCellClick}/>
                 {rowCells}
             </tr>
         );
